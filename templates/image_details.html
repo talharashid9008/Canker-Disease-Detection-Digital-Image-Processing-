@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Result</title>
+	<style>
+		body {
+			background-color: #f2e8cf;
+			font-family: Arial, sans-serif;
+			font-size: 1.2em;
+			line-height: 1.5;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+		}
+
+		h1 {
+			color: #707070;
+			font-size: 2.5em;
+			font-weight: bold;
+			margin-top: 50px;
+		}
+
+		p {
+			color: #707070;
+			font-size: 1.2em;
+			margin: 10px 0;
+		}
+
+		img {
+			border: 2px solid #707070;
+			margin-top: 30px;
+			max-width: 100%;
+			padding: 5px;
+		}
+
+		.btn {
+			background-color: #2c4848;
+			border: none;
+			border-radius: 5px;
+			color: #fff;
+			cursor: pointer;
+			font-size: 1.2em;
+			margin-top: 30px;
+			padding: 10px 20px;
+			text-align: center;
+			text-decoration: none;
+			transition: background-color 0.3s;
+		}
+
+		.btn:hover {
+			background-color: #1a3333;
+		}
+	</style>
+</head>
+<body>
+	<h1>Part of Image That is Safe From Canker</h1>
+	<img src="{{ url_for('static' , filename='uploaded.jpg') }}" alt="Safe Leaf">
+    <h4>Canker disease in potato leaves can be controlled through a combination of cultural practices and chemical treatments. Some effective cultural practices include crop rotation, ensuring good drainage, avoiding excessive irrigation, and removing diseased plant material. Additionally, copper-based fungicides and systemic fungicides can be used to manage canker disease in potato plants. However, it is important to note that early detection and treatment are key to preventing the spread of the disease, so be sure to monitor your plants regularly and take action at the first signs of infection.</h4>
+    <div class="text-center">
+        <a href="/" class="btn">Upload another image</a>
+      </div>
+</body>
+</html>

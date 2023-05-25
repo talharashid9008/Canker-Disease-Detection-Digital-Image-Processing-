@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Potato Disease Detection</title>
+    <style>
+      body {
+        background-color: #f2eee9;
+        font-family: Arial, sans-serif;
+      }
+  h1 {
+    color: #2f4f4f;
+    font-size: 36px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  form {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #b1b1b1;
+    margin: auto;
+    margin-top: 50px;
+    padding: 30px;
+    text-align: center;
+    width: 500px;
+  }
+
+  input[type="file"] {
+    display: block;
+    font-size: 18px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+    width: 80%;
+  }
+
+  input[type="submit"] {
+    background-color: #66c2a5;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 24px;
+    margin: auto;
+    margin-top: 30px;
+    padding: 10px 20px;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #4ca182;
+  }
+</style>
+  </head>
+  <body>
+    <h1>Potato Disease Detection</h1>
+    <form method="POST" enctype="multipart/form-data" action="{{ url_for('upload_image') }}">
+      <input type="file" name="image" accept="image/*">
+      <input type="submit" value="Upload Image">
+    </form>
+  </body>
+</html>

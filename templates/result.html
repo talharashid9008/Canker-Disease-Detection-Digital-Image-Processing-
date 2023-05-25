@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Result</title>
+	<style>
+		body {
+			background-color: #f2e8cf;
+			font-family: Arial, sans-serif;
+			font-size: 1.2em;
+			line-height: 1.5;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+		}
+
+		h1 {
+			color: #707070;
+			font-size: 2.5em;
+			font-weight: bold;
+			margin-top: 50px;
+		}
+
+		p {
+			color: #707070;
+			font-size: 1.2em;
+			margin: 10px 0;
+		}
+
+		img {
+			border: 2px solid #707070;
+			margin-top: 30px;
+			max-width: 100%;
+			padding: 5px;
+		}
+
+		.btn {
+			background-color: #2c4848;
+			border: none;
+			border-radius: 5px;
+			color: #fff;
+			cursor: pointer;
+			font-size: 1.2em;
+			margin-top: 30px;
+			padding: 10px 20px;
+			text-align: center;
+			text-decoration: none;
+			transition: background-color 0.3s;
+		}
+
+		.btn:hover {
+			background-color: #1a3333;
+		}
+	</style>
+</head>
+<body>
+	<h1>Prediction Result</h1>
+	<img src="{{ url_for('static' , filename='uploaded.jpg') }}" alt="Uploaded Image">
+	<p>Predicted Class: {{ predicted_class }}</p>
+	<p>Confidence: {{ confidence }}%</p>
+	<a href="/" class="btn">Upload other image</a>  
+	<a href="{{ url_for('image_details') }}" class="btn">Image Details</a>
+</body>
+</html>
